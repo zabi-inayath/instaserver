@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #666;
+      margin-bottom: 20px;
+      text-decoration: 10px dashed underline;
+      display: inline;
+    }
+
+    .server-message {
+      color: rgb(11, 254, 72);
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    img {
+      border-radius: 10px;
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Use gap for consistent spacing */
+    }
+
+    button {
+      padding: 15px 30px; /* Increase button size */
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-weight: bold; /* Emphasize button text */
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+      transform: translateY(-2px); /* Slight hover lift effect */
+    }
+
+    span {
+      font-weight: bold;
+      font-size: medium;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>SQL SERVER</h2> <span>By Zabi</span> <br><br> <br><br>
+    <h3>Join the Community - Instagram</h3>
+    <h1>No.of Users: <%=count%></h3>
+    <p class="server-message">Message from server: Good connection</p>
+    <img
+      src="https://techcrunch.com/wp-content/uploads/2023/03/alexander-shatov-71Qk8ODIBko-unsplash.jpg?w=1280"
+    />
+    <h1>Insert Data Here</h1>
+    <form action="/ig/users">
+      <button>View All Users</button>
+    </form> <br>
+    <form action="/ig/create">
+      <button>Create new account</button>
+    </form>
+    
+  </div>
+</body>
+</html>

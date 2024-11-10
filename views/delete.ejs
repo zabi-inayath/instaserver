@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; /* Remove default margin for better layout */
+      display: flex; /* Center the form horizontally */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Set minimum height for full viewport coverage */
+      background-color: #f5f5f5; /* Light background color */
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 10px; /* Rounded corners for a softer look */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      padding: 30px;
+      width: 350px; /* Set form width */
+    }
+
+    form h2 {
+      text-align: center; /* Center text within the form header */
+      margin-bottom: 20px;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+      width: 90%; /* Make input fields fill the form width */
+      padding: 10px;
+      border: 1px solid #ccc; /* Light border for input fields */
+      border-radius: 5px; /* Rounded corners for input fields */
+      margin-bottom: 15px; /* Add spacing between input fields */
+      margin-right: 20px;
+    }
+
+    form button {
+      background-color: #e74c3c; /* Reddish color for delete button */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #c0392b; /* Darker red on hover */
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="/ig/<%=user.id%>/delete?_method=PATCH">
+    <h2>Delete User(<%=user.username%>)</h2>
+    <!-- <input type="text" value="<%=user.username%>" readonly><br><br> -->
+    <input type="text" value="<%=user.email%>" readonly><br><br>
+    <input name="password" type="password" placeholder="Enter Password" required><br><br>
+    <button>Delete</button>
+    <button id="back">Cancel</button>
+  </form>
+  <script>
+      let closeButton = document.querySelector("#back");
+      closeButton.addEventListener("click", () => {
+        window.location.href = "http://192.168.29.97:8000/ig/users";
+      });
+  </script>
+</body>
+</html>
