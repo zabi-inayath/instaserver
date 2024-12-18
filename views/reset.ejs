@@ -66,7 +66,7 @@
 </head>
 <body>
   <form method="post" action="/ig/<%=user.id%>/reset?_method=PATCH">
-    <h2>Change password for<br> (<%=user.username%>)</h2>
+    <h2>Change password for<br> (<%=user.username%>)?</h2>
     <!-- <input type="text" value="<%=user.username%>" readonly><br><br> -->
     <input type="text" value="<%=user.email%>" readonly><br><br>
     <input name="oldpassword" type="password" placeholder="Enter Old Password" required><br><br>
