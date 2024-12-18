@@ -13,10 +13,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "delta_app",
-  password: "Zabi@2201"
+  host: 'sql311.infinityfree.com', // Replace with your DB host (e.g., sql123.epizy.com)
+  user: 'if0_37939467',     // Replace with your DB username
+  password: '9lxcgJ59giIKZVA', // Replace with your DB password
+  database: 'instaserver_db', // Replace with your DB name
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.error('Database connection failed:', err);
+    process.exit(1);
+  }
+  console.log('Connected to InfinityFree MySQL database');
 });
 
 //landing page
